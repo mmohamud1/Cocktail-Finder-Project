@@ -17,8 +17,8 @@ body {
 }
 
 .search-section {
-    height: 45vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(./img/drinks-on-bar-2225580.jpg);
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(./img/drink-glass-glassware-lemon-316891.jpg);
     background-size: cover;
     background-position: center;
     position: relative;
