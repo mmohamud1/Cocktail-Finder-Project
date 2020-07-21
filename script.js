@@ -9,7 +9,7 @@ const selectedCocktail = document.querySelector('#selected-cocktail');
 
 
 // Search for the cocktail by fetching form the api 
-function searchCocktail(e) {
+const searchCocktail = (e) => {
     // Stop default search settings
     e.preventDefault();
 
@@ -61,7 +61,7 @@ submit.addEventListener('submit', searchCocktail);
 
 
 // Get indiviual cocktail information 
-function getCocktailInfo(e) {
+const getCocktailInfo = (e) => {
 
     const cocktailInfo = e.path.find(item => {
         // Find individual cocktail info 
@@ -85,7 +85,7 @@ cocktailsElement.addEventListener('click', getCocktailInfo);
 
 
 // Get cocktails by ID using API
-function getCocktailById(cocktailID) {
+const getCocktailById = (cocktailID) => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${cocktailID}`)
     .then(res => res.json())
     .then(data => {
@@ -98,7 +98,7 @@ function getCocktailById(cocktailID) {
 
 
 // Add the selected cocktail information to DOM
-function addSelectedCocktailToDOM(cocktail) {
+const addSelectedCocktailToDOM = (cocktail) => {
     const ingredients = [];
 
     // loop through the ingredients in api up to 15 if an ingredient and measurement is available add to array if not break loop
@@ -136,7 +136,7 @@ function addSelectedCocktailToDOM(cocktail) {
 
 
 // Get random cocktail from API
-function getRandomCocktail() {
+const getRandomCocktail = () => {
     // clear DOM
     cocktailsElement.innerHTML = '';
     resultHeading.innerHTML = `<h2>Random Cocktail:</h2>`;
